@@ -1,0 +1,87 @@
+{
+  "doctors": [
+    {
+      "id": "1",
+      "name": "Dr. John Doe",
+      "specialization": "Cardiology"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Jane Smith",
+      "specialization": "Dermatology"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Emily Johnson",
+      "specialization": "Pediatrics"
+    }
+  ],
+  "patients": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "username": "john",
+      "password": "1234",
+      "role": "patient",
+      "age": 30,
+      "medicalHistory": [
+        "Allergy",
+        "Asthma"
+      ],
+      "appointments": [
+        "2024-09-10",
+        "2024-10-05"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "username": "jane",
+      "password": "1234",
+      "role": "patient",
+      "age": 25,
+      "medicalHistory": [
+        "Flu"
+      ],
+      "appointments": [
+        "2024-09-15"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Jim Brown",
+      "username": "jim",
+      "password": "1234",
+      "role": "patient",
+      "age": 40,
+      "medicalHistory": [
+        "Diabetes"
+      ],
+      "appointments": []
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "patientId": 1,
+      "date": "2024-09-10",
+      "details": "Routine checkup"
+    },
+    {
+      "id": "2",
+      "patientId": 2,
+      "date": "2024-09-15",
+      "details": "Consultation"
+    }
+  ],
+  "staff": [],
+  "users": [
+    {
+      "id": "14af",
+      "name": "islam",
+      "username": "islam",
+      "password": "slamslam",
+      "age": 26
+    }
+  ]
+}
