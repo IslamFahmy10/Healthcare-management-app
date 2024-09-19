@@ -1,32 +1,34 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { PatientProvider } from './context/PatientContext';
 import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard/Dashboard';
-import Profile from './components/Profile/Profile'; // Make sure you have this component
+import ProfilePatient from './components/Profile/ProfilePatient'; // Make sure you have this component
 import Appointments from './components/Appointments/Appointments'; // Make sure you have this component
-import Login from './components/PatientPortal/Login';
-import Register from './components/PatientPortal/Register';
+import Login from './components/Portal/Login';
+import Register from './components/Portal/Register';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import RegisterType from './components/RegisterType';
+import ProfileDoctor from './components/Profile/ProfileDoctor';
 
 const App = () => {
   return (
     <Router>
-      <PatientProvider>
         <Navbar />
+        <div className='pt-10'>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profilePatient" element={<ProfilePatient />} />
+          <Route path="/profileDoctor" element={<ProfileDoctor />} />
           <Route path="/appointments" element={<Appointments />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/registerType" element={<RegisterType />} />
           <Route path="/register" element={<Register />} />
         </Routes>
         <ToastContainer />
-      </PatientProvider>
+        </div>
+       
     </Router>
   );
 };

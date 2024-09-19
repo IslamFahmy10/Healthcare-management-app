@@ -8,12 +8,61 @@
     {
       "id": "2",
       "name": "Dr. Jane Smith",
-      "specialization": "Dermatology"
+      "specialization": "Neurology"
     },
     {
       "id": "3",
-      "name": "Dr. Emily Johnson",
+      "name": "Dr. Alan Brown",
       "specialization": "Pediatrics"
+    },
+    {
+      "id": "4",
+      "name": "Dr. Emily Davis",
+      "specialization": "Orthopedics"
+    },
+    {
+      "id": "5",
+      "name": "Dr. Michael Johnson",
+      "specialization": "Dermatology"
+    },
+    {
+      "id": "6",
+      "name": "Dr. Sarah Wilson",
+      "specialization": "Ophthalmology"
+    },
+    {
+      "id": "7",
+      "name": "Dr. Robert Miller",
+      "specialization": "Oncology"
+    },
+    {
+      "id": "8",
+      "name": "Dr. Laura Garcia",
+      "specialization": "Gynecology"
+    },
+    {
+      "id": "9",
+      "name": "Dr. David Martinez",
+      "specialization": "Psychiatry"
+    },
+    {
+      "id": "10",
+      "name": "Dr. Linda Rodriguez",
+      "specialization": "Endocrinology"
+    },
+    {
+      "id": "07a7",
+      "name": "tamer saieed",
+      "username": "tamer101",
+      "password": "barcabarca",
+      "age": 31,
+      "gender": "male",
+      "specialization": "cardio"
+    },
+    {
+      "id": "8aba",
+      "name": "mai ahmed",
+      "specialization": "dermatology"
     }
   ],
   "patients": [
@@ -30,7 +79,8 @@
       ],
       "appointments": [
         "2024-09-10",
-        "2024-10-05"
+        "2024-10-05",
+        "2024-10-07"
       ]
     },
     {
@@ -57,21 +107,53 @@
       "medicalHistory": [
         "Diabetes"
       ],
-      "appointments": []
+      "appointments": [
+        "2024-09-22"
+      ]
+    },
+    {
+      "appointments": [
+        "2024-02-08",
+        "2024-12-10"
+      ],
+      "id": "f2d6",
+      "name": "peter memi"
     }
   ],
   "appointments": [
     {
-      "id": "1",
-      "patientId": 1,
-      "date": "2024-09-10",
-      "details": "Routine checkup"
-    },
-    {
       "id": "2",
       "patientId": 2,
       "date": "2024-09-15",
-      "details": "Consultation"
+      "description": "Consultation"
+    },
+    {
+      "id": "08fc",
+      "patientName": "sdfsfsdfs",
+      "date": "2024-10-04",
+      "time": "01:30",
+      "description": "get medicine"
+    },
+    {
+      "id": "de52",
+      "patientName": "islam",
+      "date": "2024-09-19",
+      "time": "01:32",
+      "description": "get medicine"
+    },
+    {
+      "id": "a7e5",
+      "patientName": "khaled",
+      "date": "2024-09-18",
+      "time": "09:09",
+      "description": "I need help"
+    },
+    {
+      "id": "3923",
+      "patientName": "peter",
+      "date": "2024-12-10",
+      "time": "21:15",
+      "description": "broken Arm"
     }
   ],
   "staff": [],
@@ -81,7 +163,59 @@
       "name": "islam",
       "username": "islam",
       "password": "slamslam",
-      "age": 26
+      "age": 26,
+      "role": "patient"
+    },
+    {
+      "id": "fdb8",
+      "name": "leo",
+      "username": "leo10",
+      "password": "slamslam",
+      "age": 26,
+      "role": "patient"
+    },
+    {
+      "id": "8c14",
+      "name": "Islam Fahmy Mohammed",
+      "username": "islam10",
+      "password": "slamslam",
+      "age": 26,
+      "role": "patient"
+    },
+    {
+      "id": "0026",
+      "name": "khaled",
+      "username": "khaled",
+      "password": "nownow",
+      "age": 22,
+      "role": "patient"
+    },
+    {
+      "id": "d90d",
+      "name": "tamer saieed",
+      "username": "tamer101",
+      "password": "barcabarca",
+      "age": 31,
+      "gender": "male"
+    },
+    {
+      "id": "e88b",
+      "name": "mai ahmed",
+      "username": "maiahmed2003",
+      "password": "girlygirl",
+      "age": 23,
+      "gender": "female",
+      "specialization": "dermatology",
+      "role": "doctor"
+    },
+    {
+      "id": "0fb2",
+      "name": "peter memi",
+      "username": "peter1002",
+      "password": "alex1998",
+      "age": 15,
+      "gender": "male",
+      "role": "patient"
     }
   ]
 }

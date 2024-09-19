@@ -1,12 +1,13 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { PatientProvider } from './context/PatientContext';
 import { ToastContainer } from 'react-toastify';
+import { LoggedProvider } from './context/logged-context.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <PatientProvider>
-    <ToastContainer />
+  <LoggedProvider>
+  <ToastContainer />
     <App />
-  </PatientProvider>,
+</LoggedProvider>
+    
 )

@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .merriweather-light {
+      @apply font-merriweather font-light not-italic;
+    }
+    .merriweather-regular {
+      @apply font-merriweather font-regular not-italic;
+    }
+    .merriweather-bold {
+      @apply font-merriweather font-bold not-italic;
+    }
+    .merriweather-black {
+      @apply font-merriweather font-black not-italic;
+    }
+    .merriweather-light-italic {
+      @apply font-merriweather font-light italic;
+    }
+    .merriweather-regular-italic {
+      @apply font-merriweather font-regular italic;
+    }
+    .merriweather-bold-italic {
+      @apply font-merriweather font-bold italic;
+    }
+    .merriweather-black-italic {
+      @apply font-merriweather font-black italic;
+    }
+  }

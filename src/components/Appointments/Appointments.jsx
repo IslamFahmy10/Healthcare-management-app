@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { toast } from 'react-toastify';
+import { useLocation } from 'react-router-dom';
 
+const useQuery = ()=>{
+  return new URLSearchParams(useLocation().search);
+}
 const Appointments = () => {
   const [appointments, setAppointments] = useState([]);
+const query = useQuery()
+const name= query.get('name')
+
 
   useEffect(() => {
     const fetchAppointments = async () => {
@@ -34,9 +41,38 @@ const Appointments = () => {
       description: Yup.string(),
     }),
     onSubmit: async (values, { resetForm }) => {
+      console.log(name);
+      
       try {
         await axios.post('http://localhost:5000/appointments', values);
-        toast.success('Appointment scheduled successfully!');
+          toast.success('Appointment scheduled successfully!');
+        if (name) {
+          
+          
+          const response = await axios.get(`http://localhost:5000/patients?name=${name}`);
+          const patient = response.data[0];
+          console.log(patient);
+          
+          if (patient.appointments) {
+            const newAppointments = [...patient.appointments, values.date];
+            await axios.put(`http://localhost:5000/patients/${patient.id}`, {
+              ...patient,
+              appointments: newAppointments,
+            });
+            toast.success('Appointment Gamed ya m3lm scheduled successfully !');
+          }
+          else if(!patient.appointments) 
+            {
+              const newAppointments = [values.date];
+            await axios.put(`http://localhost:5000/patients/${patient.id}`, {
+              ...patient,
+              appointments: newAppointments,
+            });
+            toast.success('Appointment Gamed ya m3lm scheduled successfully !');} 
+          else {
+            toast.error('Patient not found');
+          }
+        } 
         resetForm();
         // Refresh appointments list
         const response = await axios.get('http://localhost:5000/appointments');
@@ -46,7 +82,6 @@ const Appointments = () => {
       }
     },
   });
-
   return (
     <div className="appointments-container p-4 m-4">
       <h1 className="text-2xl font-bold mb-4">Schedule Appointment</h1>
@@ -112,7 +147,8 @@ const Appointments = () => {
         ))}
       </div>
     </div>
-  );
+    
+   ) ;
 };
 
 export default Appointments;

@@ -14,7 +14,19 @@ export default {
       },
       borderRadius: {
         'ellipse': '50% 25%',
-      }
+      },
+      fontFamily: {
+        'merriweather': ['Merriweather', 'serif'],
+      },
+      fontWeight: {
+        'light': 300,
+        'regular': 400,
+        'bold': 700,
+        'black': 900,
+      },
+      backgroundImage: {
+        'custom-pattern': "url('./src/assets/background.jpg')",
+      },
     },
   },
   plugins: [],
